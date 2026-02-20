@@ -1,0 +1,13 @@
+while True:
+    
+    userPassword = input("Create a password: ")
+    
+    hasLetter = any(ch.isalpha() for ch in userPassword)
+    hasDigit = any(ch.isdigit() for ch in userPassword)
+    passwordLength = len(userPassword)
+    
+    if hasLetter and hasDigit and passwordLength >= 8:
+        print("Password accepted")
+        break
+    else:
+        print("Password denied. Try again.")
